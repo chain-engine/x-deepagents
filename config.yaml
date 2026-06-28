@@ -1,0 +1,35 @@
+# 应用配置文件
+server:
+  debug: true
+  port: 8000
+
+logging:
+  level: INFO
+  file_path: logs/market_research.log
+  rotation: "1 day"
+  retention: "7 days"
+
+# DeepAgents 配置
+agent:
+  # 主代理配置
+  main_agent:
+    max_iterations: 50
+    timeout: 300  # 秒
+    verbose: true
+
+  # 子代理配置
+  subagents:
+    researcher:
+      max_results: 10
+      timeout: 120
+    analyst:
+      timeout: 180
+    writer:
+      timeout: 240
+
+# 市场研究配置
+research:
+  output_dir: "reports"
+  templates_dir: "templates"
+  max_sources: 20
+  default_topic: "general"

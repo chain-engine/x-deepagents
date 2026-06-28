@@ -1,0 +1,15 @@
+.env
+reports
+logs
+templates
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.git
+.gitignore
+
+.DS_Store
+
